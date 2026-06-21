@@ -135,7 +135,8 @@ See [docs/ROADMAP.md](docs/ROADMAP.md) for planned improvements.
 
 ## Distribution
 
-See [docs/DISTRIBUTION.md](docs/DISTRIBUTION.md) for desktop executables (Mac/Windows) and `.io` landing page plans.
+- **Landing page:** [docs/GITLAB-PAGES.md](docs/GITLAB-PAGES.md) — GitLab Pages setup
+- **Desktop apps:** [docs/DISTRIBUTION.md](docs/DISTRIBUTION.md) — Mac/Windows executable plans
 
 ---
 
