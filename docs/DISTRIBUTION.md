@@ -58,11 +58,11 @@ The main process would spawn `control-server.js` and open the system browser (or
 
 **Partially — two different things:**
 
-### 1. Landing / marketing site — **Yes (live on GitLab Pages)**
+### 1. Landing / marketing site — **Yes (live on GitHub Pages)**
 
-**Project landing page:** [https://avinashpeyyety.gitlab.io/ollama-chat-app/](https://avinashpeyyety.gitlab.io/ollama-chat-app/)
+**Project landing page:** [https://avinashpeyyety.github.io/ollama-chat-app/](https://avinashpeyyety.github.io/ollama-chat-app/)
 
-Source lives in `website/`. GitLab CI (`.gitlab-ci.yml`) publishes it on every push to `main`.
+Source lives in `website/`. GitHub Actions (`.github/workflows/pages.yml`) publishes it on every push to `main`.
 
 A custom domain like `ollamachat.io` can also host:
 

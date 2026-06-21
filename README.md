@@ -2,7 +2,7 @@
 
 A local HTTPS chat app for running **best-in-class ~9B parameter models** on your own machine — optimized for practical local intelligence without cloud dependency.
 
-**Landing page:** [https://avinashpeyyety.gitlab.io/ollama-chat-app/](https://avinashpeyyety.gitlab.io/ollama-chat-app/)  
+**Landing page:** [https://avinashpeyyety.github.io/ollama-chat-app/](https://avinashpeyyety.github.io/ollama-chat-app/)  
 **Live locally at:** [https://localhost:3443](https://localhost:3443)
 
 ---
@@ -135,7 +135,7 @@ See [docs/ROADMAP.md](docs/ROADMAP.md) for planned improvements.
 
 ## Distribution
 
-- **Landing page:** [docs/GITLAB-PAGES.md](docs/GITLAB-PAGES.md) — GitLab Pages setup
+- **Landing page:** [docs/GITHUB-PAGES.md](docs/GITHUB-PAGES.md) — GitHub Pages (`github.io`)
 - **Desktop apps:** [docs/DISTRIBUTION.md](docs/DISTRIBUTION.md) — Mac/Windows executable plans
 
 ---
