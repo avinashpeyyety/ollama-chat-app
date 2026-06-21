@@ -2,36 +2,28 @@
 
 **Live URL:** [https://avinashpeyyety.github.io/ollama-chat-app/](https://avinashpeyyety.github.io/ollama-chat-app/)
 
-The landing page is in `docs/` (`index.html` + `styles.css`). Markdown docs in the same folder are also published.
-
 ---
 
-## One-time setup (required)
+## Fix 404 — enable Pages (one time)
 
-1. Open **[github.com/avinashpeyyety/ollama-chat-app/settings/pages](https://github.com/avinashpeyyety/ollama-chat-app/settings/pages)**
-2. Under **Build and deployment → Source**, choose **Deploy from a branch**
-3. Branch: **`main`** · Folder: **`/docs`**
+The 404 *"There isn't a GitHub Pages site here"* means Pages is **not enabled** in repo settings. The site files are ready on the `gh-pages` branch.
+
+### Steps
+
+1. Open **[Settings → Pages](https://github.com/avinashpeyyety/ollama-chat-app/settings/pages)**
+2. Under **Build and deployment → Source**, select **Deploy from a branch**
+3. **Branch:** `gh-pages` · **Folder:** `/ (root)`
 4. Click **Save**
+5. Wait 1–2 minutes, then refresh the live URL
 
-The site goes live within ~1 minute.
-
----
-
-## Alternative: GitHub Actions deploy
-
-The repo also includes `.github/workflows/pages.yml`. To use it instead:
-
-1. In **Settings → Pages**, set Source to **GitHub Actions**
-2. Re-run the workflow from the **Actions** tab
+You should see: *"Your site is live at https://avinashpeyyety.github.io/ollama-chat-app/"*
 
 ---
 
-## Edit the landing page
+## How updates work
 
-- `docs/index.html` — page content
-- `docs/styles.css` — styles
-
-Push to `main` → site updates automatically.
+- **Automatic:** pushing to `main` runs `.github/workflows/pages.yml`, which updates the `gh-pages` branch from `docs/`
+- **Manual edit:** change `docs/index.html` or `docs/styles.css` on `main`
 
 ---
 
