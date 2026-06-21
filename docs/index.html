@@ -21,6 +21,7 @@
           <a href="#goal">goal</a>
           <a href="#models">models</a>
           <a href="#install">install</a>
+          <a href="#aider">aider</a>
           <a href="#roadmap">roadmap</a>
           <a class="nav-cta" href="https://github.com/avinashpeyyety/ollama-chat-app" target="_blank" rel="noopener">GitHub</a>
         </nav>
@@ -43,6 +44,8 @@
           <span>runs at <code>https://localhost:3443</code></span>
           <span>·</span>
           <span>parallel all-models mode</span>
+          <span>·</span>
+          <span><a href="#aider">terminal coding via Aider</a></span>
         </div>
       </section>
 
@@ -121,6 +124,52 @@ npm run install-models   # pulls qwen3.5:9b + glm4:9b</code></pre>
         </div>
         <p class="note">
           One-liner setup: <code>npm run setup:full</code> — certificates + model downloads.
+        </p>
+      </section>
+
+      <section id="aider" class="section">
+        <h2>Terminal coding with Aider</h2>
+        <p>
+          Pair the chat UI with <a href="https://aider.chat" target="_blank" rel="noopener">Aider</a> —
+          a terminal AI coding assistant that edits files in this repo using the same local Ollama models.
+          No cloud API keys.
+        </p>
+        <div class="install-steps">
+          <div class="step">
+            <span class="step-num">1</span>
+            <div>
+              <h3>Install Aider</h3>
+              <pre><code>curl -LsSf https://aider.chat/install.sh | sh
+aider --version</code></pre>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">2</span>
+            <div>
+              <h3>Start in the project directory</h3>
+              <pre><code>cd ollama-chat-app
+./scripts/aider-ollama.sh</code></pre>
+              <p class="step-note">macOS: double-click <code>Start Aider.command</code></p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">3</span>
+            <div>
+              <h3>Pre-warm for faster replies</h3>
+              <pre><code>OLLAMA_KEEP_ALIVE=30m ollama run qwen3.5:9b "ready"
+# Ctrl+D, then run aider</code></pre>
+            </div>
+          </div>
+        </div>
+        <ul class="feature-list">
+          <li>Uses <code>qwen3.5:9b</code> or <code>glm4:9b</code> via Ollama</li>
+          <li>Edits files with git-aware diffs</li>
+          <li>Thinking disabled for snappier Qwen replies</li>
+          <li>Same models as the HTTPS chat UI</li>
+        </ul>
+        <p class="note">
+          Full guide: <a href="https://github.com/avinashpeyyety/ollama-chat-app/blob/main/docs/AIDER.md">docs/AIDER.md</a>
+          · Faster model: <code>AIDER_MODEL=ollama_chat/glm4:9b ./scripts/aider-ollama.sh</code>
         </p>
       </section>
 

@@ -281,6 +281,12 @@ main {
   font-size: 14px;
 }
 
+.step-note {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
 pre {
   margin: 0;
   padding: 14px 16px;

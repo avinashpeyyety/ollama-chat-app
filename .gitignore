@@ -5,3 +5,4 @@ certs/*.pem
 .env.*
 *.log
 data/
+.aider*

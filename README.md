@@ -104,6 +104,42 @@ Open **https://localhost:3443** (accept the self-signed certificate warning).
 
 ---
 
+## Terminal coding with Aider
+
+Use [Aider](https://aider.chat) to edit this repo from the terminal with the same local Ollama models.
+
+### Install Aider
+
+```bash
+curl -LsSf https://aider.chat/install.sh | sh
+```
+
+### Run in this project
+
+Aider must be started **inside the repo** (not from `~`):
+
+```bash
+./scripts/aider-ollama.sh
+```
+
+**macOS:** double-click `Start Aider.command`
+
+Uses `ollama_chat/qwen3.5:9b` by default. For faster replies:
+
+```bash
+AIDER_MODEL=ollama_chat/glm4:9b ./scripts/aider-ollama.sh
+```
+
+Pre-warm the model to avoid long first-load waits:
+
+```bash
+OLLAMA_KEEP_ALIVE=30m ollama run qwen3.5:9b "ready"
+```
+
+See [docs/AIDER.md](docs/AIDER.md) for performance tips and shell alias setup.
+
+---
+
 ## Scripts
 
 | Command | Description |
