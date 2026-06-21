@@ -58,9 +58,13 @@ The main process would spawn `control-server.js` and open the system browser (or
 
 **Partially — two different things:**
 
-### 1. Landing / marketing site (`.io` domain) — **Yes**
+### 1. Landing / marketing site — **Yes (live on GitLab Pages)**
 
-A domain like `ollamachat.io` can host:
+**Project landing page:** [https://avinashpeyyety.gitlab.io/ollama-chat-app/](https://avinashpeyyety.gitlab.io/ollama-chat-app/)
+
+Source lives in `website/`. GitLab CI (`.gitlab-ci.yml`) publishes it on every push to `main`.
+
+A custom domain like `ollamachat.io` can also host:
 
 - Product overview and the 9B local intelligence mission
 - Download links for Mac `.dmg` and Windows `.exe`

@@ -2,6 +2,7 @@
 
 A local HTTPS chat app for running **best-in-class ~9B parameter models** on your own machine — optimized for practical local intelligence without cloud dependency.
 
+**Landing page:** [https://avinashpeyyety.gitlab.io/ollama-chat-app/](https://avinashpeyyety.gitlab.io/ollama-chat-app/)  
 **Live locally at:** [https://localhost:3443](https://localhost:3443)
 
 ---

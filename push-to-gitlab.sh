@@ -41,11 +41,11 @@ if command -v glab >/dev/null 2>&1; then
   if glab auth status >/dev/null 2>&1; then
     echo "==> Creating private GitLab repo and pushing via glab..."
     glab repo create ollama-chat-app \
-      --private \
+      --public \
       --source=. \
       --remote=origin \
       --push \
-      --description "Local HTTPS chat UI for Ollama models"
+      --description "Local HTTPS chat UI for best-in-class 9B Ollama models"
     echo ""
     echo "SUCCESS: Pushed to GitLab"
     glab repo view --web=false 2>/dev/null || git remote get-url origin
@@ -74,7 +74,7 @@ if [ -n "${GITLAB_TOKEN:-}" ] || [ -n "${GITLAB_PRIVATE_TOKEN:-}" ]; then
   curl -s --request POST \
     --header "PRIVATE-TOKEN: $TOKEN" \
     --header "Content-Type: application/json" \
-    --data '{"name":"ollama-chat-app","visibility":"private","description":"Local HTTPS chat UI for Ollama models"}' \
+    --data '{"name":"ollama-chat-app","visibility":"public","description":"Local HTTPS chat UI for best-in-class 9B Ollama models"}' \
     "https://${HOST}/api/v4/projects" >/dev/null
 
   REMOTE="git@${HOST}:${NAMESPACE}/ollama-chat-app.git"
