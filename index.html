@@ -3,38 +3,163 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Ollama Chat — local HTTPS chat for best-in-class 9B models. Qwen 3.5 9B + GLM-4 9B on your machine." />
+    <meta
+      name="description"
+      content="Ollama Chat — local HTTPS chat for best-in-class 9B models. Qwen 3.5 9B + GLM-4 9B on your machine."
+    />
     <title>Ollama Chat — 9B Local Intelligence</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="nav">
       <div class="nav-inner">
-        <a class="logo" href="#"><span class="logo-icon">◎</span><span>Ollama Chat</span></a>
+        <a class="logo" href="#">
+          <span class="logo-icon">◎</span>
+          <span>Ollama Chat</span>
+        </a>
         <nav class="nav-links">
-          <a href="#goal">goal</a><a href="#models">models</a><a href="#install">install</a><a href="#roadmap">roadmap</a>
+          <a href="#goal">goal</a>
+          <a href="#models">models</a>
+          <a href="#install">install</a>
+          <a href="#roadmap">roadmap</a>
           <a class="nav-cta" href="https://github.com/avinashpeyyety/ollama-chat-app" target="_blank" rel="noopener">GitHub</a>
         </nav>
       </div>
     </header>
+
     <main>
       <section class="hero">
         <p class="eyebrow">local · https · 9b paradigm</p>
         <h1>Best-in-class intelligence,<br />entirely on your machine</h1>
-        <p class="lead">A focused chat app for the <strong>9B parameter sweet spot</strong> — strong enough for reasoning, coding, and vision, light enough for a modern laptop. No cloud. No API keys.</p>
+        <p class="lead">
+          A focused chat app for the <strong>9B parameter sweet spot</strong> — strong enough for
+          reasoning, coding, and vision, light enough for a modern laptop. No cloud. No API keys.
+        </p>
         <div class="hero-actions">
           <a class="btn primary" href="#install">Get started</a>
           <a class="btn secondary" href="https://github.com/avinashpeyyety/ollama-chat-app" target="_blank" rel="noopener">View source</a>
         </div>
-        <div class="hero-meta"><span>runs at <code>https://localhost:3443</code></span><span>·</span><span>parallel all-models mode</span></div>
+        <div class="hero-meta">
+          <span>runs at <code>https://localhost:3443</code></span>
+          <span>·</span>
+          <span>parallel all-models mode</span>
+        </div>
       </section>
-      <section id="goal" class="section"><h2>Project goal</h2><p>Cloud assistants are capable, but they send your data elsewhere. Ollama Chat targets <strong>optimal local intelligence</strong> in the ~9B class.</p></section>
-      <section id="install" class="section"><h2>Install</h2><pre><code>git clone https://github.com/avinashpeyyety/ollama-chat-app.git
+
+      <section id="goal" class="section">
+        <h2>Project goal</h2>
+        <p>
+          Cloud assistants are capable, but they send your data elsewhere. Ollama Chat targets
+          <strong>optimal local intelligence</strong> in the ~9B class — the best trade-off between
+          quality, speed, and RAM on consumer hardware.
+        </p>
+        <div class="cards three">
+          <article class="card">
+            <h3>Local-first</h3>
+            <p>Ollama on localhost. Conversations stay on disk and in your browser — not a vendor's server.</p>
+          </article>
+          <article class="card">
+            <h3>9B curated</h3>
+            <p>Pre-configured for Qwen 3.5 9B and GLM-4 9B — compare models side-by-side in one click.</p>
+          </article>
+          <article class="card">
+            <h3>Production-like</h3>
+            <p>HTTPS UI, streaming responses, file attachments, persistent history, server controls.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="models" class="section">
+        <h2>Default model stack</h2>
+        <div class="cards two">
+          <article class="card model-card">
+            <div class="model-tag">primary</div>
+            <h3>Qwen 3.5 9B</h3>
+            <code>qwen3.5:9b</code>
+            <p>Vision, tools, thinking. Strong all-rounder for chat, code, and image analysis.</p>
+          </article>
+          <article class="card model-card">
+            <div class="model-tag alt">alternate</div>
+            <h3>GLM-4 9B</h3>
+            <code>glm4:9b</code>
+            <p>Complementary bilingual reasoning style at the same parameter scale.</p>
+          </article>
+        </div>
+        <p class="note">
+          Select <strong>all models</strong> in the app to stream answers from every installed model simultaneously.
+        </p>
+      </section>
+
+      <section id="install" class="section">
+        <h2>Install</h2>
+        <div class="install-steps">
+          <div class="step">
+            <span class="step-num">1</span>
+            <div>
+              <h3>Clone &amp; install</h3>
+              <pre><code>git clone https://github.com/avinashpeyyety/ollama-chat-app.git
 cd ollama-chat-app
-npm install
-npm run setup:full
-npm start</code></pre></section>
+npm install</code></pre>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">2</span>
+            <div>
+              <h3>Install Ollama + 9B models</h3>
+              <pre><code>brew install ollama && brew services start ollama   # macOS
+npm run install-models   # pulls qwen3.5:9b + glm4:9b</code></pre>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">3</span>
+            <div>
+              <h3>Launch</h3>
+              <pre><code>npm start
+# open https://localhost:3443</code></pre>
+            </div>
+          </div>
+        </div>
+        <p class="note">
+          One-liner setup: <code>npm run setup:full</code> — certificates + model downloads.
+        </p>
+      </section>
+
+      <section class="section features">
+        <h2>Features</h2>
+        <ul class="feature-list">
+          <li>Per-model labels in chat</li>
+          <li>Parallel all-models responses</li>
+          <li>Text &amp; image attachments</li>
+          <li>Think-mode for supported models</li>
+          <li>Disk + browser chat persistence</li>
+          <li>Start / stop / restart from the UI</li>
+        </ul>
+      </section>
+
+      <section id="roadmap" class="section">
+        <h2>Coming soon</h2>
+        <div class="cards three">
+          <article class="card">
+            <h3>Desktop app</h3>
+            <p>Signed macOS .dmg and Windows .exe with bundled setup wizard.</p>
+          </article>
+          <article class="card">
+            <h3>Model arbiter</h3>
+            <p>After parallel runs, pick or summarize the best answer automatically.</p>
+          </article>
+          <article class="card">
+            <h3>Markdown UI</h3>
+            <p>Rendered code blocks, copy buttons, side-by-side compare layout.</p>
+          </article>
+        </div>
+      </section>
     </main>
-    <footer class="footer"><p><a href="https://github.com/avinashpeyyety/ollama-chat-app">GitHub</a> · MIT License</p></footer>
+
+    <footer class="footer">
+      <p>
+        <a href="https://github.com/avinashpeyyety/ollama-chat-app" target="_blank" rel="noopener">GitHub</a>
+        · MIT License · Built for the 9B local intelligence paradigm
+      </p>
+    </footer>
   </body>
 </html>
