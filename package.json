@@ -1,0 +1,35 @@
+{
+  "name": "ollama-chat-app",
+  "version": "1.0.0",
+  "description": "Local HTTPS chat UI for best-in-class 9B Ollama models",
+  "type": "module",
+  "scripts": {
+    "start": "node control-server.js",
+    "start:main": "node server.js",
+    "stop": "lsof -ti :3443 | xargs kill -9 2>/dev/null; lsof -ti :3445 | xargs kill -9 2>/dev/null || true",
+    "setup": "node scripts/generate-certs.js",
+    "install-models": "node scripts/install-models.js",
+    "setup:full": "node scripts/setup-full.js",
+    "postinstall": "node scripts/generate-certs.js",
+    "restart-and-test": "bash scripts/restart-and-test.sh"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "ollama",
+    "local-ai",
+    "qwen",
+    "glm4",
+    "9b",
+    "chat"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avinashpeyyety/ollama-chat-app.git"
+  }
+}
